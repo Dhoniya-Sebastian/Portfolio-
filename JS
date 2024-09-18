@@ -1,0 +1,19 @@
+// Cursor background movement effect
+document.addEventListener('mousemove', function(e) {
+    const cursorBackground = document.querySelector('.cursor-background');
+    cursorBackground.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
+// Form submission handling
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    // Simulate form submission and response
+    setTimeout(() => {
+        formStatus.textContent = "Thank you for contacting me!";
+        contactForm.reset();
+    }, 1000);
+});
